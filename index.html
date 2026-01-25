@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio – Ritej Sghaier</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="#accueil">Accueil</a>
+  <a href="#apropos">À propos</a>
+  <a href="#experience">Expériences</a>
+  <a href="#projets">Projets</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+  <section class="section accueil" id="accueil">
+    <h1>Ritej Sghaier</h1>
+    <p>Étudiante en Sciences des Données</p>
+    <a href="#apropos" class="btn">Me découvrir</a>
+  </section>
+
+  <section class="section" id="apropos">
+    <h2>À propos</h2>
+    <p>
+      Étudiante en BUT Sciences des Données, passionnée par les statistiques
+      et l’analyse de données. Je souhaite évoluer vers le métier de Data Analyst.
+    </p>
+  </section>
+
+  <section class="section" id="experience">
+    <h2>Expériences & engagements</h2>
+    <p>
+      Bénévolat, mentorat, stages et engagements associatifs.
+    </p>
+  </section>
+
+  <section class="section" id="projets">
+    <h2>Projets</h2>
+    <div class="projects">
+    
+    <div class="project-card">
+      <h3>Analyse de données – Projet académique</h3>
+      <p>
+        Analyse d’un jeu de données avec statistiques descriptives
+        et visualisation sous Excel et Python.
+      </p>
+      <a href="#" class="btn">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Projet Data – Cas d’étude</h3>
+      <p>
+        Étude de cas sur des données fictives pour interprétation
+        et restitution des résultats.
+      </p>
+      <a href="#" class="btn">Voir le projet</a>
+    </div>
+
+  </div>
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Tu peux me contacter ici :</p>
+
+  <div class="contact">
+    <a href="mailto:ritej@email.com" class="btn">📧 Email</a>
+    <a href="#" class="btn">💼 LinkedIn</a>
+  </div>
+</section>
+<script>
+  const sections = document.querySelectorAll('.section');
+
+  function showSections() {
+    sections.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (top < screenHeight - 100) {
+        section.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', showSections);
+  window.addEventListener('load', showSections);
+</script>
+
+</body>
+</html>
